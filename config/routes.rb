@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :contacts
+  
   root 'pages#index'
   get '/about' => 'pages#about', as: 'about'
   # The priority is based upon order of creation: first created -> highest priority.
