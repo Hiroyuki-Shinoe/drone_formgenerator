@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :users do
+    resources :types do
+      resources :formats
+    end
+  end
+
   resources :contacts
-  
+
   root 'pages#index'
   get '/about' => 'pages#about', as: 'about'
   # The priority is based upon order of creation: first created -> highest priority.
