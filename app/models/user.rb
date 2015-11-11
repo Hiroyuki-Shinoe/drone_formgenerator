@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :types
-  has_many :formats, through: :types
+  has_many :formats
 end
