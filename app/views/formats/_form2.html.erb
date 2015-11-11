@@ -1,0 +1,25 @@
+<%= form_for @format, url: create_user_formats_path do |f| %>
+
+  <%= hidden_field_tag 'type', params[:type] %>
+
+  <div class="form-group">
+    <%= f.label :maker_of_drone, 'ドローン製造者名' %>
+    <%= f.text_area :maker_of_drone, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :model_of_drone, '型式' %>
+    <%= f.text_area :model_of_drone, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :serial_number, '製造番号等' %>
+    <%= f.text_area :serial_number, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :maximum_takeoff_weight, '最大離陸重量' %>
+    <%= f.text_area :maximum_takeoff_weight, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "入力完了！", class: 'btn btn-primary' %>
+  </div>
+<% end %>

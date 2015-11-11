@@ -1,18 +1,23 @@
 class FormatsController < ApplicationController
 
   def new
-    
+    @user = User.find(params[:user_id])
+    @format = Format.new
   end
 
+  def show
+    @user = User.find(params[:user_id])
+    @format = Format.find(params[:id])
+  end
 
   def create
-    @type = Type.find(params[:type_id])
-    @format = @type.build_format(format_params)
-    @format.user = current_user
+    @user = User.find(params[:user_id])
+    @format = @user.formats.build(format_params)
+    @format.type_id = params[:type_id]
 
     if @format.save
       flash[:success] = "申請書類の出力に成功しました"
-      redirect_to user_type_format(params[user_id: current_user.id, type_id: @type.id, id: @format.id])
+      redirect_to user_format_path(params[user_id: current_user.id, id: @format.id])
     else
       render action :new
     end

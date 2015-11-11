@@ -1,0 +1,161 @@
+<%= form_for @format, url: create_user_formats_path do |f| %>
+
+  <%= hidden_field_tag 'user', params[:user] %>
+
+  <div class="form-group">
+    <%= f.label :type1_year, '年' %>
+    <%= f.text_field :type1_year, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :type1_month, '月' %>
+    <%= f.text_field :type1_month, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :type1_date, '日' %>
+    <%= f.text_field :type1_date, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :to_whom, '申請先' %>
+    <%= f.text_field :to_whom, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :type1_name, '申請者の氏名' %>
+    <%= f.text_field :type1_name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address, '申請者の住所' %>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+  <h2>飛行の目的を以下から選択してください（複数選択可）</h2>
+  <div class="form-group">
+    <%= f.label :purpose_01, '空撮' %>
+    <%= f.check_box :purpose_01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_02, '警備' %>
+    <%= f.check_box :purpose_02, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_03, '農林水産業' %>
+    <%= f.check_box :purpose_03, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_04, '測量・環境調査' %>
+    <%= f.check_box :purpose_04, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_05, '設備メンテナンス' %>
+    <%= f.check_box :purpose_05, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_06, 'インフラ点検・保守' %>
+    <%= f.check_box :purpose_06, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_07, '資材管理' %>
+    <%= f.check_box :purpose_07, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_08, '輸送・宅配' %>
+    <%= f.check_box :purpose_08, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_09, '自然観測' %>
+    <%= f.check_box :purpose_09, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_10, '捜索・救助' %>
+    <%= f.check_box :purpose_10, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_11, '趣味' %>
+    <%= f.check_box :purpose_11, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :purpose_12, 'その他' %>
+    <%= f.text_field :purpose_12, class: 'form-control' %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= f.label :date_time, '飛行日時' %>
+    <%= f.text_area :date_time, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :route, '飛行経路' %>
+    <%= f.text_area :route, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :altitude, '飛行高度' %>
+    <%= f.text_area :altitude, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :characteristic_of_drone, 'ドローンの特徴' %>
+    <%= f.text_area :characteristic_of_drone, class: 'form-control' %>
+  </div>
+  <h2>該当する飛行禁止空域の事例を選択し、その理由を書いてください（複数選択可）。</h2>
+  <div class="form-group">
+    <%= f.label :which_of_exclusion_zone_1, '進入表面、転移表面若しくは水平表面又は延長進入表面、円錐表面若しくは外側水平表面の上空の空域' %>
+    <%= f.check_box :which_of_exclusion_zone_1, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_exclusion_zone_2, '地表又は水面から150m以上の高さの空域' %>
+    <%= f.check_box :which_of_exclusion_zone_2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_exclusion_zone_3, '人又は家屋の密集している地域の上空' %>
+    <%= f.check_box :which_of_exclusion_zone_3, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :reason_for_exclusion_zone, '理由' %>
+    <%= f.text_area :reason_for_exclusion_zone, class: 'form-control' %>
+  </div>
+  <h2>該当する飛行禁止方法の事例を選択し、その理由を書いてください（複数選択可）。</h2>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_1, '夜間飛行' %>
+    <%= f.check_box :which_of_prohibited_manner_1, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_2, '目視外飛行' %>
+    <%= f.check_box :which_of_prohibited_manner_2, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_3, '人又は物件との距離が確保できない飛行' %>
+    <%= f.check_box :which_of_prohibited_manner_3, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_4, '催し場所上空の飛行' %>
+    <%= f.check_box :which_of_prohibited_manner_4, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_5, '爆発物等の輸送' %>
+    <%= f.check_box :which_of_prohibited_manner_5, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :which_of_prohibited_manner_6, '物件投下' %>
+    <%= f.check_box :which_of_prohibited_manner_6, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :reason_for_prohibited_manner, '理由' %>
+    <%= f.text_area :reason_for_prohibited_manner, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :function_performance_of_drone, 'ドローンの機能及び性能に関する事項' %>
+    <%= f.text_area :function_performance_of_drone, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :experience_skill_of_pilot, '操縦者の飛行経験、技能等に関する事項' %>
+    <%= f.text_area :experience_skill_of_pilot, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :measure_for_safety, '安全確保のための対策に関する事項' %>
+    <%= f.text_area :measure_for_safety, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :others, 'その他参考となる事項' %>
+    <%= f.text_area :others, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "入力完了！", class: 'btn btn-primary' %>
+  </div>
+<% end %>

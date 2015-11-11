@@ -14,7 +14,7 @@
           無人航空機の飛行に関する許可・承認申請書
         </h3>
         <br>
-        <%= link_to "入力フォーム１へ", new_user_type_format_path(user_id: current_user.id, type_id: 1), class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to "入力フォーム１へ", new_user_format_path(user_id: current_user.id, type_id: 1), class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
     <div class="col-md-4 col-sm-4">
@@ -26,7 +26,7 @@
           無人航空機の機能・性能に関する基準への適合確認書
         </h3>
         <br>
-        <%= link_to "入力フォーム２へ", new_user_type_format_path(user_id: current_user.id, type_id: 2), class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to "入力フォーム２へ", new_user_format_path(user_id: current_user.id, type_id: 2), class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
     <div class="col-md-4 col-sm-4">
@@ -38,7 +38,7 @@
           操縦技能確認書
         </h3>
         <br>
-        <%= link_to "入力フォーム３へ", new_user_type_format_path(user_id: current_user.id, type_id: 3), class: 'btn btn-default btn-lg btn-block' %>
+        <%= link_to "入力フォーム３へ", new_user_format_path(user_id: current_user.id, type_id: 3), class: 'btn btn-default btn-lg btn-block' %>
       </div>
     </div>
   <% else %>

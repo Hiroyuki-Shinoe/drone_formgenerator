@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-8 col-sm-8 col-md-offset-2">
+    <div class="well">
+      <% if params[:type_id] == "1" %>
+        <%= render 'form1' %>
+      <% elsif params[:type_id] == "2" %>
+        <%= render 'form2' %>
+      <% else %>
+        <%= render 'form3' %>
+      <% end %>
+    </div>
+  </div>
+</div>

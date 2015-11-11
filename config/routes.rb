@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users do
-    resources :types do
-      resources :formats
+    resources :types
+    resources :formats, except: [:create] do
+      collection do
+        post :create, as: 'create'
+      end
     end
   end
 
