@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151111042021) do
+ActiveRecord::Schema.define(version: 20151111230926) do
 
   create_table "contacts", force: :cascade do |t|
     t.string   "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151111042021) do
     t.datetime "updated_at"
   end
 
-  create_table "formats", force: :cascade do |t|
+  create_table "formformats", force: :cascade do |t|
     t.integer "type_id"
     t.string  "type1_year"
     t.string  "type1_month"

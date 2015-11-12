@@ -1,4 +1,4 @@
 class Type < ActiveRecord::Base
   belongs_to :user
-  has_many :formats
+  has_many :formformats
 end

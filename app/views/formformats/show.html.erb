@@ -1,0 +1,20 @@
+<%= @formformat.type1_year %>
+<%= @formformat.type1_month %>
+<%= @formformat.type1_date %>
+<%= @formformat.to_whom %>
+<%= @formformat.type1_name %>
+<%= @formformat.address %>
+<%= @formformat.purpose_01 %>
+<%= @formformat.purpose_02 %>
+<%= @formformat.purpose_03 %>
+<%= @formformat.purpose_04 %>
+<%= @formformat.purpose_05 %>
+
+<% if @formformat.type_id == 1 %>
+  <%= render 'show_form' %>
+
+<% elsif @formformat.type_id == 2 %>
+
+<% else %>
+
+<% end %>

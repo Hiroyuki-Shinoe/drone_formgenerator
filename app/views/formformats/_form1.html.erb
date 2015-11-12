@@ -1,6 +1,6 @@
-<%= form_for @format, url: create_user_formats_path do |f| %>
+<%= form_for @formformat, url: create_user_formformats_path() do |f| %>
 
-  <%= hidden_field_tag 'user', params[:user] %>
+  <%= hidden_field_tag 'type', params[:type] %>
 
   <div class="form-group">
     <%= f.label :type1_year, '年' %>

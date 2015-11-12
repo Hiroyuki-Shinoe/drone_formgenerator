@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :types
-    resources :formats, except: [:create] do
+    resources :formformats, except: [:create] do
       collection do
         post :create, as: 'create'
       end
